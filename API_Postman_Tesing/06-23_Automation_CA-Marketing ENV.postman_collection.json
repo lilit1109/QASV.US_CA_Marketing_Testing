@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "93bd55c6-8662-4b87-bee5-9489dc6ea346",
+		"name": "06-23_Automation_CA-Marketing ENV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20045004"
+	},
+	"item": [
+		{
+			"name": "Create New Postal Address",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "zv5-E-7xU9bi_0znNXJR6cbc_ropfoHtr6R6dUaLhEY.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAyVDAwOjI2OjA5LjczOFoiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwNDoyNjowOS43MzhaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"fullName\": {\r\n            \"firstName\": \"Anna\",\r\n            \"lastName\": \"Nice\"\r\n        },\r\n        \"company\": \"EnteryLevel\",\r\n        \"taxInfo\": {\r\n            \"id\": null,\r\n            \"type\": null\r\n        },\r\n        \"addressLine1\": \"444 Cedar Rd\",\r\n        \"addressLine2\": \"Apt 639\",\r\n        \"street\": {\r\n            \"name\": null,\r\n            \"number\": null\r\n        },\r\n        \"city\": \"Riverstreet\",\r\n        \"country\": \"USA\",\r\n        \"subdivision\": \"OH\",\r\n        \"zipCode\": \"90178\",\r\n        \"phoneNumber\": \"546-258-4563\",\r\n        \"location\": null\r\n    },\r\n    \"setAsDefault\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show existing postal address",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4jjkyk2Kg-xDmnIcLaYh32PBcIKSQuIZEyZhTgt_YpI.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAxVDIwOjQyOjUzLjYyMloiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwMDo0Mjo1My42MjJaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresse",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show specific postal address",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4jjkyk2Kg-xDmnIcLaYh32PBcIKSQuIZEyZhTgt_YpI.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAxVDIwOjQyOjUzLjYyMloiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwMDo0Mjo1My42MjJaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addressece/9fe873-fad0-4e35-9c84-c43bb285cc0a",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addressece",
+						"9fe873-fad0-4e35-9c84-c43bb285cc0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Postal Address",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4jjkyk2Kg-xDmnIcLaYh32PBcIKSQuIZEyZhTgt_YpI.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAxVDIwOjQyOjUzLjYyMloiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwMDo0Mjo1My42MjJaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"id\": \"ce9fe873-fad0-4e35-9c84-c43bb285cc0a\",\r\n        \"fullName\": {\r\n            \"firstName\": \"Anna\",\r\n            \"lastName\": \"Nice\"\r\n        },\r\n        \"company\": \"Horizon company\",\r\n        \"taxInfo\": {\r\n            \"id\": null,\r\n            \"type\": null\r\n        },\r\n        \"addressLine1\": \"777 Cedar Lane\",\r\n        \"addressLine2\": \"Apt 963\",\r\n        \"street\": {\r\n            \"name\": null,\r\n            \"number\": null\r\n        },\r\n        \"city\": \"Rivertown\",\r\n        \"country\": \"USA\",\r\n        \"subdivision\": \"GA\",\r\n        \"zipCode\": \"78901\",\r\n        \"phoneNumber\": \"789-456-1230\",\r\n        \"location\": null\r\n    },\r\n    \"setAsDefault\": false,\r\n    \"fieldMask\": {\r\n        \"paths\": [\r\n            \"fullName.firstName\",\r\n            \"fullName.lastName\",\r\n            \"company\",\r\n            \"addressLine1\",\r\n            \"addressLine2\",\r\n            \"city\",\r\n            \"country\",\r\n            \"subdivision\",\r\n            \"zipCode\",\r\n            \"phoneNumber\",\r\n            \"setAsDefault\"\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/ce9fe873-fad0-4e35-9c84-c43bb285cc0a",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"ce9fe873-fad0-4e35-9c84-c43bb285cc0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Changed postal address Copy",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4jjkyk2Kg-xDmnIcLaYh32PBcIKSQuIZEyZhTgt_YpI.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAxVDIwOjQyOjUzLjYyMloiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwMDo0Mjo1My42MjJaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresse/ce9fe873-fad0-4e35-9c84-c43bb285cc0a",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresse",
+						"ce9fe873-fad0-4e35-9c84-c43bb285cc0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Postal Address",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4jjkyk2Kg-xDmnIcLaYh32PBcIKSQuIZEyZhTgt_YpI.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAxVDIwOjQyOjUzLjYyMloiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwMDo0Mjo1My42MjJaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/ce9fe873-fad0-4e35-9c84-c43bb285cc0a",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"ce9fe873-fad0-4e35-9c84-c43bb285cc0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Deleted postal address",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4jjkyk2Kg-xDmnIcLaYh32PBcIKSQuIZEyZhTgt_YpI.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAxVDIwOjQyOjUzLjYyMloiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwMDo0Mjo1My42MjJaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresse/ce9fe873-fad0-4e35-9c84-c43bb285cc0a",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresse",
+						"ce9fe873-fad0-4e35-9c84-c43bb285cc0a"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "zv5-E-7xU9bi_0znNXJR6cbc_ropfoHtr6R6dUaLhEY.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTA5LTAyVDAwOjI2OjA5LjczOFoiLCJ1aWQiOiI0ODAzNGQxMC1iNjlmLTQ4YTYtYWZiZC05YTkyZTZiYjFlNWMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjY5ZDg0MTQ3LWZkY2QtNDU4MC1hYzQ0LTY0ODdiZTYwNzczZSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wOS0wMlQwNDoyNjowOS43MzhaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization:",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
